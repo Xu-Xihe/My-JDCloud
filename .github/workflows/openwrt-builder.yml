@@ -161,8 +161,8 @@ jobs:
         
     - name: 选择无线firmware
       run: |
-        cp -r JDCloud-AX6000-Baili/firmware/mt_wifi/mt7986-fw-jdc openwrt/package/mtk/drivers/mt_wifi/files
-        cp -r JDCloud-AX6000-Baili/firmware/warp/mt7986-fw-jdc openwrt/package/mtk/drivers/warp/files
+        cp -r JDCloud-AX6000-Baili/firmware/mt_wifi/mt7986-fw-20230808 openwrt/package/mtk/drivers/mt_wifi/files
+        cp -r JDCloud-AX6000-Baili/firmware/warp/mt7986-fw-20230808 openwrt/package/mtk/drivers/warp/files
         cd openwrt
         if [ ${{ github.event.inputs.WA_FW }} == 'no-new-fw' ]; then
                 sed -i '/CONFIG_MTK_MT7986_NEW_FW=y/d' .config
